@@ -1,0 +1,16 @@
+<h1>Lepers Game</h1>
+<p>Welcome!</p>
+
+<!-- def generate_grid(grid_size) -->
+<p>Here is your grid</p>
+<p><%= @grid %></p>
+
+
+
+<form action="/score" method="get">
+  <label for="question">What is your guess?</label>
+  <input type="hidden" name="grid" value="<%= @grid.join(" ") %>"></input>
+  <input type="hidden" name="start_time" value="<%= @start_time %>"></input>
+  <input type="text" id="answer" name="attempt" placeholder="what do you thinK?">
+  <input type="submit" value="Play now">
+</form>
